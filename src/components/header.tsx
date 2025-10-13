@@ -1,12 +1,19 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Button } from "./button";
 import { Dropdown } from "./dropdown";
 import logo from "../assets/logo.png";
 import { NAV_LINKS } from "../constants/nav";
+import { FaHeadset } from "react-icons/fa";
+import { MobileMenu } from "./mobile-menu";
+import { useState } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { FiX } from "react-icons/fi";
 
 export function Header() {
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const { scrollY } = useScroll();
 
+  const handleToggleMobileMenu = () =>
+    setOpenMobileMenu((prevState) => !prevState);
   const blur = useTransform(scrollY, [0, 50, 100], [0, 4, 8]);
   const backgroundColor = useTransform(
     scrollY,
@@ -53,7 +60,7 @@ export function Header() {
           >
             <img src={logo} alt="Logo" width={150} />
           </motion.a>
-          <ul className="flex items-center gap-10">
+          <ul className="items-center gap-10 md:flex hidden">
             {NAV_LINKS.map(({ label, href }, index) => (
               <motion.li
                 key={href}
@@ -84,8 +91,30 @@ export function Header() {
           initial={{ x: 50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
+          className="flex items-center gap-4"
         >
-          <Button>FALE COM NOSSA EQUIPE</Button>
+          <MobileMenu
+            isOpen={openMobileMenu}
+            onClose={handleToggleMobileMenu}
+          />
+          <button className="bg-primary-700 text-white md:px-4 md:py-2 p-2 flex items-center justify-center rounded-full">
+            <span className="md:block hidden">FALE COM NOSSA EQUIPE</span>
+            <span className="md:hidden block">
+              <FaHeadset size={24} />
+            </span>
+          </button>
+          {openMobileMenu ? (
+            <button
+              onClick={handleToggleMobileMenu}
+              className="text-red-500 md:hidden"
+            >
+              <FiX size={30} />
+            </button>
+          ) : (
+            <button onClick={handleToggleMobileMenu} className="md:hidden">
+              <RxHamburgerMenu size={24} />
+            </button>
+          )}
         </motion.div>
       </div>
     </motion.header>

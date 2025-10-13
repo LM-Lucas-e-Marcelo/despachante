@@ -7,7 +7,7 @@ import { IoLocationOutline } from "react-icons/io5";
 export function Footer() {
   return (
     <footer className="w-full flex items-center justify-center py-10 flex-col">
-      <div className="w-full max-w-7xl flex items-start justify-between p-4">
+      <div className="w-full max-w-7xl flex items-start md:justify-between p-4 flex-wrap gap-10 md:gap-0 justify-center">
         <section className="max-w-[300px]">
           <img src={logo} alt="Logo" width={250} className="mb-4" />
           <p className="text-zinc-900 text-lg">

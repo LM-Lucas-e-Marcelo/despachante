@@ -6,7 +6,7 @@ import who from "../assets/who.png";
 export function About({ id }: { id: string }) {
   return (
     <div id={id} className="w-full flex items-center justify-center py-10">
-      <div className="w-full max-w-7xl flex items-center justify-between p-4">
+      <div className="w-full max-w-7xl flex items-center justify-between p-4 flex-wrap gap-10 md:gap-0">
         <FadeInLeft className="flex flex-col gap-7 max-w-[600px] text-lg">
           <motion.h1
             className="text-secondary-500 text-6xl font-bold"

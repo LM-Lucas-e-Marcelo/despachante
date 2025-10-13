@@ -9,8 +9,8 @@ export function Payment({ id }: { id: string }) {
       id={id}
       className="w-full flex items-center justify-center py-10 bg-gradient-to-br from-secondary-800 to-secondary-900"
     >
-      <div className="w-full max-w-7xl flex items-center justify-between p-4">
-        <FadeInLeft className="w-[70%] flex flex-col items-center gap-4">
+      <div className="w-full max-w-7xl flex items-center justify-between p-4 flex-wrap gap-10 md:gap-0">
+        <FadeInLeft className="w-full text-center md:text-left flex flex-col items-center gap-4 md:w-[70%]">
           <motion.p
             className="font-bold text-white text-4xl"
             initial={{ opacity: 0, y: 30 }}

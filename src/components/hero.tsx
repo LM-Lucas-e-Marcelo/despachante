@@ -7,7 +7,7 @@ export function Hero({ id }: { id: string }) {
       id={id}
       className="bg-gradient-to-r from-zinc-900 to-zinc-600 pt-20 w-full flex items-center justify-center bg-[url(/hero.png)] bg-cover bg-center"
     >
-      <div className="w-full max-w-7xl flex items-center justify-between p-4 min-h-[500px]">
+      <div className="w-full max-w-7xl flex items-center justify-between p-4 min-h-[500px] md:flex-row flex-col">
         <motion.section
           className="flex flex-col gap-4"
           initial={{ opacity: 0, x: -100 }}
