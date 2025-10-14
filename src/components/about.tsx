@@ -9,7 +9,7 @@ export function About({ id }: { id: string }) {
       <div className="w-full max-w-7xl flex items-center justify-between p-4 flex-wrap gap-10 md:gap-0">
         <FadeInLeft className="flex flex-col gap-7 max-w-[600px] text-lg">
           <motion.h1
-            className="text-secondary-500 text-6xl font-bold"
+            className="text-secondary-500 md:text-6xl text-4xl font-bold"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
