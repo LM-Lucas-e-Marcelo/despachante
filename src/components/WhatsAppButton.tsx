@@ -22,7 +22,7 @@ export const WhatsAppButton = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "5548999999999";
+    const phoneNumber = "554891257916";
     const message =
       "Olá! Gostaria de saber mais sobre os serviços do Despachante Xande.";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
@@ -35,7 +35,7 @@ export const WhatsAppButton = () => {
 
   return (
     <motion.div
-      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 cursor-pointer"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
@@ -43,7 +43,7 @@ export const WhatsAppButton = () => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.div
-        className="absolute inset-0 bg-green-500 rounded-full"
+        className="absolute inset-0 bg-green-500 rounded-full pointer-events-none"
         animate={{
           scale: [1, 1.2, 1],
           opacity: [0.7, 0, 0.7],
@@ -56,8 +56,8 @@ export const WhatsAppButton = () => {
       />
 
       <motion.button
-        className="relative bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-xl transition-colors duration-300 group"
         onClick={handleWhatsAppClick}
+        className="relative bg-green-500 hover:bg-green-600 text-white p-3 sm:p-4 rounded-full shadow-xl transition-colors duration-300 group cursor-pointer"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         transition={{ duration: 0.2 }}
@@ -88,7 +88,7 @@ export const WhatsAppButton = () => {
       </motion.button>
 
       <motion.div
-        className="absolute inset-0 border-2 border-green-500 rounded-full"
+        className="absolute inset-0 border-2 border-green-500 rounded-full pointer-events-none"
         animate={{
           scale: [1, 1.5, 1],
           opacity: [0.5, 0, 0.5],
@@ -102,7 +102,10 @@ export const WhatsAppButton = () => {
       />
 
       {showNotification && (
-        <WhatsAppNotification onClose={() => setShowNotification(false)} />
+        <WhatsAppNotification
+          onClose={() => setShowNotification(false)}
+          handleWhatsAppClick={handleWhatsAppClick}
+        />
       )}
     </motion.div>
   );

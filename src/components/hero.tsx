@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import xande from "../assets/xande.png";
 
 export function Hero({ id }: { id: string }) {
+  const handleRedirectToWhatsApp = () => {
+    window.open("https://wa.me/554891257916", "_blank");
+  };
   return (
     <div
       id={id}
@@ -40,7 +43,8 @@ export function Hero({ id }: { id: string }) {
             ATÉ 24X NOS CARTÕES DE CRÉDITO
           </motion.p>
           <motion.button
-            className="bg-primary-500 rounded-full w-[250px] p-2 font-bold text-white mt-4 hover:scale-110 transition-all duration-300"
+            onClick={handleRedirectToWhatsApp}
+            className="bg-primary-500 rounded-full w-[250px] p-2 font-bold text-white mt-4 hover:scale-110 transition-all duration-300 cursor-pointer"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 1.0 }}

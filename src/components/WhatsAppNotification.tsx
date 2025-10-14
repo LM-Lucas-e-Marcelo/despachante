@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 
 interface WhatsAppNotificationProps {
   onClose: () => void;
+  handleWhatsAppClick: () => void;
 }
 
 export const WhatsAppNotification = ({
   onClose,
+  handleWhatsAppClick,
 }: WhatsAppNotificationProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -58,7 +60,10 @@ export const WhatsAppNotification = ({
               te ajudar! 😊
             </p>
             <div className="mt-2 flex space-x-2">
-              <button className="text-xs bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600 transition-colors">
+              <button
+                onClick={handleWhatsAppClick}
+                className="text-xs bg-green-500 text-white px-3 py-1 rounded-full hover:bg-green-600 transition-colors cursor-pointer"
+              >
                 Responder
               </button>
               <button
@@ -66,7 +71,7 @@ export const WhatsAppNotification = ({
                   setIsVisible(false);
                   onClose();
                 }}
-                className="text-xs text-gray-500 hover:text-gray-700 transition-colors"
+                className="text-xs text-gray-500 hover:text-gray-700 transition-colors border border-gray-200 rounded-full px-3 py-1 cursor-pointer"
               >
                 Depois
               </button>

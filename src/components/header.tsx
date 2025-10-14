@@ -34,6 +34,10 @@ export function Header() {
     ]
   );
 
+  const handleRedirectToWhatsApp = () => {
+    window.open("https://wa.me/554891257916", "_blank");
+  };
+
   return (
     <motion.header
       className="w-full flex items-center justify-center fixed top-0 left-0 right-0 z-50 backdrop-blur-sm"
@@ -97,7 +101,10 @@ export function Header() {
             isOpen={openMobileMenu}
             onClose={handleToggleMobileMenu}
           />
-          <button className="bg-primary-700 text-white md:px-4 md:py-2 p-2 flex items-center justify-center rounded-full">
+          <button
+            onClick={handleRedirectToWhatsApp}
+            className="bg-primary-700 text-white md:px-4 md:py-2 p-2 flex items-center justify-center rounded-full cursor-pointer"
+          >
             <span className="md:block hidden">FALE COM NOSSA EQUIPE</span>
             <span className="md:hidden block">
               <FaHeadset size={24} />

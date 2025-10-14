@@ -67,7 +67,10 @@ export function Footer() {
             />{" "}
             R. Hermógenes Prazeres, 97 - Centro, Biguaçu - SC, 88160-152
           </a>
-          <a className="flex items-center gap-4">
+          <a
+            href="https://api.whatsapp.com/send?phone=554891257916"
+            className="flex items-center gap-4"
+          >
             <FaWhatsapp className="text-secondary-500" size={23} /> (48)
             99125-7916
           </a>

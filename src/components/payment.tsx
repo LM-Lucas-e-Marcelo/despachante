@@ -4,6 +4,9 @@ import { FadeInRight } from "./animations/FadeInRight";
 import paymentImg from "../assets/payment.svg";
 
 export function Payment({ id }: { id: string }) {
+  const handleRedirectToWhatsApp = () => {
+    window.open("https://wa.me/554891257916", "_blank");
+  };
   return (
     <div
       id={id}
@@ -40,7 +43,8 @@ export function Payment({ id }: { id: string }) {
             OS DÉBITOS DO SEU VEÍCULO
           </motion.p>
           <motion.button
-            className="py-2 px-4 rounded-full bg-primary-500 text-white max-w-[400px] mt-4 hover:scale-110 transition-all duration-300"
+            onClick={handleRedirectToWhatsApp}
+            className="py-2 px-4 rounded-full bg-primary-500 text-white max-w-[400px] mt-4 hover:scale-110 transition-all duration-300 cursor-pointer"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}

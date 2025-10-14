@@ -4,6 +4,9 @@ import { FadeInRight } from "./animations/FadeInRight";
 import transferImg from "../assets/transfer.png";
 
 export function Transfer({ id }: { id: string }) {
+  const handleRedirectToWhatsApp = () => {
+    window.open("https://wa.me/554891257916", "_blank");
+  };
   return (
     <div id={id} className="w-full flex items-center justify-center py-10">
       <div className="w-full max-w-7xl flex items-center justify-between p-4 flex-wrap gap-10 md:gap-0">
@@ -45,7 +48,8 @@ export function Transfer({ id }: { id: string }) {
           </motion.p>
 
           <motion.button
-            className="py-2 px-4 rounded-full bg-secondary-500 text-white max-w-[400px] hover:scale-110 transition-all duration-300"
+            onClick={handleRedirectToWhatsApp}
+            className="py-2 px-4 rounded-full bg-secondary-500 text-white max-w-[400px] hover:scale-110 transition-all duration-300 cursor-pointer"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}

@@ -72,8 +72,10 @@ export function Services() {
             </span>
           )}
           <a
+            href="https://api.whatsapp.com/send?phone=554891257916"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-primary-700 text-white px-4 py-2 rounded-full text-center mt-5 block w-[360px]"
-            href="#"
           >
             QUERO RESOLVER MEUS PROBLEMAS
           </a>
