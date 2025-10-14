@@ -26,7 +26,7 @@ export function Hero({ id }: { id: string }) {
             CONSULTAR SEU IPVA 2025 NUNCA FOI TÃO FÁCIL
           </motion.p>
           <motion.h1
-            className="text-primary-200 text-5xl font-bold"
+            className="text-primary-200 md:text-5xl text-3xl font-bold"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
