@@ -23,7 +23,7 @@ export function Hero({ id }: { id: string }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            CONSULTAR SEU IPVA 2025 NUNCA FOI TÃO FÁCIL
+            CONSULTAR SEU IPVA 2026 NUNCA FOI TÃO FÁCIL
           </motion.p>
           <motion.h1
             className="text-primary-200 md:text-5xl text-3xl font-bold"
@@ -39,7 +39,7 @@ export function Hero({ id }: { id: string }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            CONSULTE SEU IPVA 2025, LICENCIAMENTO E MULTAS E <br /> PARCELE EM
+            CONSULTE SEU IPVA 2026, LICENCIAMENTO E MULTAS E <br /> PARCELE EM
             ATÉ 24X NOS CARTÕES DE CRÉDITO
           </motion.p>
           <motion.button
